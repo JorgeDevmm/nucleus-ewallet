@@ -148,7 +148,9 @@ img {
     color: var(--blanco);
   }
 }
-
+.navegacion__link--blanco {
+  color: var(--blanco);
+}
 .nucleus {
   margin-top: 3rem;
 }
@@ -323,4 +325,33 @@ img {
   color: var(--primario);
   font-weight: bold;
   text-align: right;
+}
+
+/* footer */
+.footer {
+  background-color: #5a30a0;
+  padding: 3rem 0 1rem 0;
+}
+@media (min-width: 768px) {
+  .footer__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__logo {
+  width: 20rem;
+  margin: 0 auto 4rem auto;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    margin: 0;
+  }
+}
+.copyright {
+  text-align: center;
+  color: var(--blanco);
+}
+.copyright__texto {
+  margin: 1rem 0 0 0;
 }

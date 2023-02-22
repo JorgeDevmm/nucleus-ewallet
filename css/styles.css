@@ -180,12 +180,35 @@ img {
 .listado__elemento:hover {
   transform: scale(1.1);
 }
+@media (min-width: 768px) {
+  .listado__elemento--2col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
 
 .listado__heading {
   color: var(--primario);
   font-size: 3rem;
   margin: 0;
 }
+.listado__numero {
+  color: var(--primario);
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 900;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .listado__numero {
+    flex-basis: 20rem;
+    text-align: right;
+    font-size: 4rem;
+  }
+}
+
 .listado__texto {
   font-size: 2rem;
   margin: 0;
@@ -227,4 +250,77 @@ img {
     column-gap: 5rem;
     align-items: center;
   }
+}
+
+/* Comisiones */
+@media (min-width: 768px) {
+  .comisiones__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    column-gap: 5rem;
+  }
+}
+@media (min-width: 998px) {
+  .comisiones__grid {
+    align-items: center;
+  }
+}
+
+.comisiones__texto {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .comisiones__texto {
+    text-align: left;
+  }
+}
+
+/* testimoniales */
+.testimoniales {
+  background-color: var(--primario);
+  padding: 5rem 0;
+}
+.testimoniales__heading {
+  color: var(--blanco);
+}
+.testimoniales__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .testimoniales__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.testimonial {
+  box-shadow: 0px 0px 15px 3px rgb(0 0 0 /0.15);
+  background-color: var(--blanco);
+  padding: 2rem;
+  position: relative;
+}
+.testimonial__texto {
+  padding-left: 4rem;
+}
+.testimonial__texto::before {
+  content: '';
+  background-image: url(../img/comilla.png);
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: center;
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 2rem;
+}
+
+.testimonial__autor {
+  color: var(--primario);
+  font-weight: bold;
+  text-align: right;
 }
